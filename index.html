@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 
 </head>
 <body>
@@ -19,22 +20,22 @@
             </ul>
         </div>
         <div class="navR">
-           <button type="button">Sign Out</button> 
+           <button type="button">Sign Out</button>
         </div>
     </div>
-    
+
     <div class="mainContainer">
         <div class="container1">
                 <div class="contentLT">
                     <div class="contentLTHead">
-                        <img class="mainPic" src="./icons/user-circle.png" alt="">   
+                        <img class="mainPic" src="./icons/user-circle.png" alt="">
                     </div>
                     <div class="contentLTBody">
-                        <h1>Jane Doe</h1>
+                        <h1 id="name">Jane Doe</h1>
                         <h3><img class="pinDrop"src="./icons/map-marker.png" alt="">Seattle</h3>
                         <p>Developer | Engineer | Problem Solver</p>
                         <p>Master of shadows and the Internet!</p>
-                        <p><img class="gear" src="./icons/gear.png" alt=""><a href="#">edit profile</a></p>
+                        <p><img class="gear" id="editProf" src="./icons/gear.png" alt=""><a href="#" onclick = "editName()">edit profile</a></p>
                     </div>
                 </div>
                 <div class="contentLB">
@@ -45,7 +46,7 @@
                         <h3>Coding Dojo - Full Stack Bootcamp</h3>
                         <p>Dec 2019 - Mar 2020</p>
                         <p id="blackBelt">Triple black belt in python, MERN, and C#...</p>
-                    </div>            
+                    </div>
                 </div>
         </div>
         <div class="container2">
@@ -53,51 +54,51 @@
                 <div class="contentRTHead">
                     <div class="requestNoti">2</div>
                     <h2>Connection Requests</h2>
-                </div> 
+                </div>
                 <div class="contentRTBody">
-                    <div class="contentRTBodyL">
+                    <div class="contentRTBodyL" id="toddRequest">
                         <img id="todd" src="./icons/todd-s.jpg" alt=""></img>
                         <p>Todd E</p>
-                        <img class="check" src="./icons/accept-circle.png" alt=""></img>
-                        <img class="ex" src="./icons/close-circle.png" alt=""></img>
+                        <img id="check" onclick="hideRequest1()" src="./icons/accept-circle.png" alt=""></img>
+                        <img id="ex" onclick="hideRequest1()" src="./icons/close-circle.png" alt=""></img>
                     </div>
-                    <div class="contentRTBodyR">
+                    <div class="contentRTBodyR" id="philRequest">
                         <img id="phil" src="./icons/phil-s.jpg" alt=""></img>
                         <p>Phil K</p>
-                        <img class="check" src="./icons/accept-circle.png" alt=""></img>
-                        <img class="ex" src="./icons/close-circle.png" alt=""></img>
+                        <img id="check" onclick="hideRequest2()" src="./icons/accept-circle.png" alt=""></img>
+                        <img id="ex" onclick="hideRequest2()" src="./icons/close-circle.png" alt=""></img>
                     </div>
                 </div>
-            </div>    
+            </div>
 
             <div class="contentRB">
                 <div class="contentRBHead">
                     <div class="connectionNoti">500+</div>
                     <h2>Your Connections</h2>
                 </div>
-                    <div class="contentRBBody1">
+                    <div class="contentRBBody1" id="adrienRequest">
                         <img id="adrien" src="./icons/adrien-s.jpg" alt=""></img>
                         <p>Adrien D</p>
-                        <img class="check" src="./icons/accept-circle.png" alt=""></img>
-                        <img class="ex" src="./icons/close-circle.png" alt=""></img>
+                        <img id="check" onclick="hideRequest3()" src="./icons/accept-circle.png" alt=""></img>
+                        <img id="ex" onclick="hideRequest3()" src="./icons/close-circle.png" alt=""></img>
                     </div>
-                    <div class="contentRBBody2">
+                    <div class="contentRBBody2" id="anneRequest">
                         <img id="anne" src="./icons/anne-s.jpg" alt="">
                         <p>Anne J</p>
-                        <img class="check" src="./icons/accept-circle.png" alt=""></img>
-                        <img class="ex" src="./icons/close-circle.png" alt=""></img>
+                        <img id="check" onclick="hideRequest4()" src="./icons/accept-circle.png" alt=""></img>
+                        <img id="ex" onclick="hideRequest4()" src="./icons/close-circle.png" alt=""></img>
                     </div>
-                    <div class="contentRBBody3">
-                        <img id="alayne" src="./icons/alayne-s.jpg" alt="">                       
+                    <div class="contentRBBody3" id="alayneRequest">
+                        <img id="alayne" src="./icons/alayne-s.jpg" alt="">
                         <p>Alayne T</p>
-                        <img class="check" src="./icons/accept-circle.png" alt=""></img>
-                        <img class="ex" src="./icons/close-circle.png" alt=""></img>
+                        <img id="check" onclick="hideRequest5()" src="./icons/accept-circle.png" alt=""></img>
+                        <img id="ex" onclick="hideRequest5()" src="./icons/close-circle.png" alt=""></img>
                     </div>
-                    <div class="contentRBBody4">
+                    <div class="contentRBBody4" id="arryRequest">
                         <img id="arry" src="./icons/arry-s.jpg" alt="">
                         <p>Arry Y</p>
-                        <img class="check" src="./icons/accept-circle.png" alt=""></img>
-                        <img class="ex" src="./icons/close-circle.png" alt=""></img>
+                        <img id="check" onclick="hideRequest6()" src="./icons/accept-circle.png" alt=""></img>
+                        <img id="ex" onclick="hideRequest6()" src="./icons/close-circle.png" alt=""></img>
                     </div>
                 <div class="contentRBFoot">
                     <a href="#">View More</a>
@@ -105,6 +106,6 @@
             </div>
         </div>
     </div>
-        
+
 </body>
 </html>
